@@ -60,6 +60,17 @@ body{
 .card-status .time{
     color: hsl(215, 51%, 70%);
 }
+.card-creator{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+.card-creator img{
+    max-width: 30px;
+}
+.card-creator span{
+    padding-left: 10px;
+}
 .card-creator .user-text{
     color: hsl(215, 51%, 70%);
 }
