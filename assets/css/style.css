@@ -102,7 +102,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 576px) {
+@media (min-width: 375px) {
     .img-container,
     h1,
     .creator-name{
