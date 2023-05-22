@@ -25,10 +25,15 @@ body {
   background: hsl(216, 50%, 16%);
   box-shadow: 2px 25px 0px 15px hsl(217, 55%, 10%);
 }
-.card-content .img-container{
-    max-height: 280px;
-    border-radius: 12px;
-    overflow: hidden;
+.card-content .img-container {
+  max-height: 280px;
+  border-radius: 12px;
+  position: relative;
+}
+.img-top {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 .card-content img {
   max-width: 280px;
@@ -39,6 +44,7 @@ body {
   gap: 1em;
 }
 .card-content .card-title {
+  margin-top: 1rem;
   font-size: 10px;
 }
 .card-detail .card-description {
@@ -71,7 +77,7 @@ body {
   align-items: center;
   font-weight: 300;
 }
-.card-creator img{
+.card-creator img {
   max-width: 30px;
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 50%;
@@ -83,9 +89,9 @@ body {
 .card-creator .user-text {
   color: hsl(215, 51%, 70%);
 }
-.card-creator .creator-name{
-    text-decoration: none;
-    color: hsl(0, 0%, 100%);
+.card-creator .creator-name {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
 }
 .attribution {
   margin-top: 60px;
@@ -96,33 +102,32 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media(min-width:576px){
-    .card-content .img-container{
-        position: relative;
+@media (min-width: 576px) {
+    .img-container,
+    h1,
+    .creator-name{
+        cursor: pointer;
     }
-    .card-content .hover-color{
-        position: absolute;
-        background: hsl(178, 100%, 50%);
-        z-index: 999;
+    h1:hover,
+    .creator-name:hover{
+        color: hsl(178, 100%, 50%);
     }
-    .card-content .img-hover{
+    .img-hover{
         position: absolute;
-        top: 42%;
-        left: 42%;
+        background: hsla(178, 100%, 50%, 0.365);
+        top: 0;
+        width: 100%;
+        height: 100%;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
-    .card-content .img-container:hover .img-hover{
+    .img-hover svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .img-hover:hover{
         opacity: 1;
     }
-    .card-content .img-container:hover .img-top,
-    .card-content .img-container:hover .img-hover{
-        cursor: pointer;
-    }
-    .card-content .img-top:hover .img-container{
-        
-    }
 }
-
-
-/* background: hsl(178, 100%, 50%); */
