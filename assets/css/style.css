@@ -79,6 +79,10 @@ body {
 .card-creator .user-text {
   color: hsl(215, 51%, 70%);
 }
+.card-creator .creator-name{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
 .attribution {
   margin-top: 60px;
   font-size: 11px;
@@ -86,4 +90,8 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media(min-width:375px){
+
 }
